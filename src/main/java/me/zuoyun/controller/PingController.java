@@ -1,8 +1,5 @@
 package me.zuoyun.controller;
 
-import com.github.sd4324530.fastweixin.api.MaterialAPI;
-import com.github.sd4324530.fastweixin.api.config.ApiConfig;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,19 +15,19 @@ import me.zuoyun.RebotApi.Api;
  * Information:
  */
 @RestController
-public class DemoController {
+public class PingController {
 
 
-  private static final Logger log = LoggerFactory.getLogger(DemoController.class);
+  private static final Logger log = LoggerFactory.getLogger(PingController.class);
 
 
-  @RequestMapping("/demo")
+  @RequestMapping("/ping")
   public Object demo() {
     log.info("test info");
     log.debug("test debug");
     log.error("test error");
     log.trace("test trace");
-    return "demo";
+    return "pong";
   }
 
   @Autowired

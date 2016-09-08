@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>weixin.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>weixin.%d{yyyy-MM-dd-HH}.log</fileNamePattern>
+            <maxHistory>72</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} %line - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework.web" level="INFO"/>
+    <logger name="me.zuoyun" level="DEBUG">
+        <appender-ref ref="file"/>
+    </logger>
+
+</configuration>

@@ -54,4 +54,8 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+
+
 src/main/resources/conf/wechat.properties
+*.log
+simple-springboot-wechat.iml
